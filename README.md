@@ -1,6 +1,7 @@
 # weather_forecast
 
-A new Flutter project.
+project masih belum bisa dijalankan dan masih dalam proses 
+
 
 ## Getting Started
 
