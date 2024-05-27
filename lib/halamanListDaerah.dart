@@ -1,4 +1,4 @@
-import 'dart:convert';
+rimport 'dart:convert';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -6,8 +6,8 @@ import 'package:weather_app/halamanUtama.dart';
 import 'package:weather_app/model/modelDaerah.dart';
 import 'package:http/http.dart' as http;
 import 'api_data_source.dart';
-// import 'halamanKonversiMataUang.dart';
-// import 'halamanKonversiWaktu.dart';
+import 'halamanKonversiMataUang.dart';
+import 'halamanKonversiWaktu.dart';
 import 'halamanProfile.dart';
 
 class HalamanListDaerah extends StatefulWidget {
@@ -437,27 +437,27 @@ class _HalamanListDaerahState extends State<HalamanListDaerah> {
                           id: widget.id,
                         )));
           } else if (index == 1) {
-            // Navigator.pushReplacement(
-            //     context,
-            //     MaterialPageRoute(
-            //         builder: (BuildContext context) => HalamanWaktu(
-            //               idWilayah: _user[0],
-            //               longitude: _user[2],
-            //               latitude: _user[3],
-            //               kabupaten: _user[1],
-            //               id: widget.id,
-            //             )));
-          // } else if (index == 2) {
-          //   Navigator.pushReplacement(
-          //       context,
-          //       MaterialPageRoute(
-          //           builder: (BuildContext context) => HalamanMataUang(
-          //                 idWilayah: _user[0],
-          //                 longitude: _user[2],
-          //                 latitude: _user[3],
-          //                 kabupaten: _user[1],
-          //                 id: widget.id,
-          //               )));
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => HalamanWaktu(
+                          idWilayah: _user[0],
+                          longitude: _user[2],
+                          latitude: _user[3],
+                          kabupaten: _user[1],
+                          id: widget.id,
+                        )));
+          } else if (index == 2) {
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => HalamanMataUang(
+                          idWilayah: _user[0],
+                          longitude: _user[2],
+                          latitude: _user[3],
+                          kabupaten: _user[1],
+                          id: widget.id,
+                        )));
           } else if (index == 3) {
             Navigator.pushReplacement(
                 context,
