@@ -6,8 +6,6 @@ import 'package:weather_app/halamanUtama.dart';
 import 'package:weather_app/model/modelDaerah.dart';
 import 'package:http/http.dart' as http;
 import 'api_data_source.dart';
-// import 'halamanKonversiMataUang.dart';
-// import 'halamanKonversiWaktu.dart';
 import 'halamanProfile.dart';
 
 class HalamanListDaerah extends StatefulWidget {

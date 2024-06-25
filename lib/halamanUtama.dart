@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:weather_app/halamanKonversiMataUang.dart';
-import 'package:weather_app/halamanKonversiWaktu.dart';
 import 'package:weather_app/halamanListDaerah.dart';
 import 'package:weather_app/halamanProfile.dart';
 import 'package:weather_app/model/modelCuaca.dart';
@@ -585,16 +583,6 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                 builder: (BuildContext context) =>
                     HalamanUtama(idWilayah: _user[0], longitude: _user[2], latitude: _user[3], kabupaten: _user[1], id: widget.id,)));
           }
-          // else if (index == 1) {
-          //   Navigator.pushReplacement(context, MaterialPageRoute(
-          //       builder: (BuildContext context) =>
-          //           HalamanWaktu(idWilayah: _user[0], longitude: _user[2], latitude: _user[3], kabupaten: _user[1], id: widget.id,)));
-          // }
-          // else if (index == 2) {
-          //   Navigator.pushReplacement(context, MaterialPageRoute(
-          //       builder: (BuildContext context) =>
-          //           HalamanMataUang(idWilayah: _user[0], longitude: _user[2], latitude: _user[3], kabupaten: _user[1], id: widget.id,)));
-          // }
           else if (index == 3) {
             Navigator.pushReplacement(context, MaterialPageRoute(
                 builder: (BuildContext context) =>

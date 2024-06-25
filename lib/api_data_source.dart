@@ -1,11 +1,3 @@
-// import 'base_network.dart';
-// class ApiDataSource {
-//   static ApiDataSource instance = ApiDataSource();
-//   Future<List<dynamic>> loadListDaerah() {
-//     return BaseNetwork.get("wilayah.json");
-//   }
-// }
-
 import 'base_network.dart';
 
 class ApiDataSource {
