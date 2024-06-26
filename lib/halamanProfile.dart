@@ -456,7 +456,7 @@ class _HalamanProfileState extends State<HalamanProfile> {
             const TextStyle(fontWeight: FontWeight.bold, color: Colors.black54),
         fixedColor: Colors.black54,
         unselectedItemColor: Colors.black26,
-        currentIndex: 3,
+        currentIndex: 1,
         onTap: (int index) {
           if (index == 0) {
             Navigator.pushReplacement(
@@ -491,20 +491,6 @@ class _HalamanProfileState extends State<HalamanProfile> {
               size: 30,
             ),
             label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.access_time_filled_rounded,
-              size: 30,
-            ),
-            label: "Time",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.monetization_on_rounded,
-              size: 30,
-            ),
-            label: "Money",
           ),
           BottomNavigationBarItem(
             icon: Icon(

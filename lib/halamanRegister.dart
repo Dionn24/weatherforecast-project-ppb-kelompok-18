@@ -556,7 +556,7 @@ class _HalamanRegisterState extends State<HalamanRegister> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (BuildContext context) =>
-                                                        HalamanLogin()));
+                                                        const HalamanLogin()));
                                           },
                                           child: const Text(
                                             'Login',
@@ -653,7 +653,7 @@ class _HalamanRegisterState extends State<HalamanRegister> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => HalamanLogin(),
+            builder: (BuildContext context) => const HalamanLogin(),
           ),
         );
         break;

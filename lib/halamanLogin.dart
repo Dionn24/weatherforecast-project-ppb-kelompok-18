@@ -248,7 +248,7 @@ class _HalamanLoginState extends State<HalamanLogin> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (BuildContext context) =>
-                                                HalamanRegister()));
+                                                const HalamanRegister()));
                                   },
                                   child: const Text(
                                     'Register',

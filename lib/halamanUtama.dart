@@ -583,7 +583,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                 builder: (BuildContext context) =>
                     HalamanUtama(idWilayah: _user[0], longitude: _user[2], latitude: _user[3], kabupaten: _user[1], id: widget.id,)));
           }
-          else if (index == 3) {
+          else if (index == 1) {
             Navigator.pushReplacement(context, MaterialPageRoute(
                 builder: (BuildContext context) =>
                     HalamanProfile(idWilayah: _user[0], longitude: _user[2], latitude: _user[3], kabupaten: _user[1], id: widget.id,)));
@@ -596,20 +596,6 @@ class _HalamanUtamaState extends State<HalamanUtama> {
               size: 30,
             ),
             label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.access_time_filled_rounded,
-              size: 30,
-            ),
-            label: "Time",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.monetization_on_rounded,
-              size: 30,
-            ),
-            label: "Money",
           ),
           BottomNavigationBarItem(
             icon: Icon(

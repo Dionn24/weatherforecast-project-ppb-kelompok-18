@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
         kabupaten: items![3],
         id: items![4],
       )
-          : HalamanLogin(),
+          : const HalamanLogin(),
     );
   }
 
