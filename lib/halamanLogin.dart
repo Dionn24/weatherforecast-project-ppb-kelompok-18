@@ -80,7 +80,7 @@ class _HalamanLoginState extends State<HalamanLogin> {
                 ),
                 child: Padding(
                   padding:
-                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.1),
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.075),
                   child: Form(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

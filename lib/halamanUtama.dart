@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:weather_app/halamanListDaerah.dart';
 import 'package:weather_app/halamanProfile.dart';
 import 'package:weather_app/model/modelCuaca.dart';
 import 'api_data_source.dart';
@@ -47,8 +46,6 @@ class _HalamanUtamaState extends State<HalamanUtama> {
             if(_listData[x]["id"] == widget.id) {
               _user[0] = _listData[x]["idTempat"];
               _user[1] = _listData[x]["tempatDefault"];
-              _user[2] = _listData[x]["longitude"];
-              _user[3] = _listData[x]["latitute"];
             }
           }
         });
@@ -179,7 +176,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Lat : ${widget.latitude}" ?? "Lat : NULL",
+                                  "Garis Lintang : ${widget.latitude}" ?? "Garis Lintang : NULL",
                                   style: const TextStyle(
                                     fontSize: 18,
                                     color: Colors.white,
@@ -196,7 +193,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                                   width: 20,
                                 ),
                                 Text(
-                                  "Lon : ${widget.longitude}" ?? "Lon : NULL",
+                                  "Garis Bujur : ${widget.longitude}" ?? "Garis Bujur : NULL",
                                   style: const TextStyle(
                                     fontSize: 18,
                                     color: Colors.white,
@@ -250,7 +247,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                                                   width: 5,
                                                 ),
                                                 Text(
-                                                  "Humidity",
+                                                  "Kelmbapan",
                                                   style: TextStyle(
                                                       color: Colors.black54,
                                                       fontSize: 18),
@@ -525,13 +522,6 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
                     child: InkWell(
-                      onTap: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (builder) => HalamanListDaerah(idWilayah: _user[0], longitude: _user[2], latitude: _user[3], kabupaten: _user[1], id: widget.id,)),
-                        );
-                      },
                       child: Container(
                         decoration: BoxDecoration(
                             color: Colors.black.withOpacity(0.2),
