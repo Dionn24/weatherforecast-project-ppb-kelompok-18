@@ -23,7 +23,7 @@ class _HalamanRegisterState extends State<HalamanRegister> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _namaController = TextEditingController();
   final TextEditingController _nimController = TextEditingController();
-  final TextEditingController _kelasController = TextEditingController();
+  final TextEditingController _semesterController = TextEditingController();
   final TextEditingController _kesanController = TextEditingController();
   List _listData = [];
   bool siangHari = false;
@@ -40,7 +40,7 @@ class _HalamanRegisterState extends State<HalamanRegister> {
         "username": _usernameController.text.toString(),
         "password": Crypt.sha256(_passwordController.text).toString(),
         "nim": _nimController.text.toString(),
-        "kelas": _kelasController.text.toString(),
+        "Semester": _semesterController.text.toString(),
         "tempatDefault": _selectedItem.toString(),
         "idTempat": idTempat,
         "longitude": longitude,
@@ -339,10 +339,10 @@ class _HalamanRegisterState extends State<HalamanRegister> {
                                       height: MediaQuery.of(context).size.width * 0.05,
                                     ),
                                     TextFormField(
-                                      controller: _kelasController,
+                                      controller: _semesterController,
                                       validator: (value) {
                                         if (value!.isEmpty) {
-                                          return "Kelas tidak boleh kosong";
+                                          return "semester tidak boleh kosong";
                                         }
                                         return null;
                                       },
@@ -361,7 +361,7 @@ class _HalamanRegisterState extends State<HalamanRegister> {
                                         filled: true,
                                         focusColor: Colors.black,
                                         fillColor: Colors.white.withOpacity(0.5),
-                                        hintText: 'Masukan kelas',
+                                        hintText: 'Masukan Semester',
                                         focusedBorder: OutlineInputBorder(
                                             borderSide: const BorderSide(
                                                 color: Colors.white, width: 3),

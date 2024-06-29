@@ -239,7 +239,7 @@ class _HalamanProfileState extends State<HalamanProfile> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       const Text(
-                                        "Kelas",
+                                        "Semester",
                                         style: TextStyle(
                                           color: Colors.black45,
                                           fontSize: 18,
